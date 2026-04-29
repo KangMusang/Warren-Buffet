@@ -1,6 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Warren Buffett: From Omaha to Oracle</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-.poster{background:#F5EFE6;font-family:Georgia,serif;width:100%;max-width:680px}
+html,body{width:100%;overflow-x:hidden}
+body{background:#1a0f08;min-height:100vh;display:flex;justify-content:center;align-items:flex-start;padding:16px}
+.poster{background:#F5EFE6;font-family:Georgia,serif;width:100%;max-width:680px;box-shadow:0 8px 40px rgba(0,0,0,.5);overflow:hidden}
 .header{background:#8B2500;padding:18px 24px 14px;text-align:center}
 .header h1{color:#F5EFE6;font-size:26px;font-weight:900;letter-spacing:1px;line-height:1.15;text-transform:uppercase}
 .hero{background:#2C1A0E;display:flex;align-items:stretch;border-bottom:3px solid #FAC775}
@@ -64,7 +72,65 @@
 .full-dark{background:#2C1A0E;border:1px solid #C5B09A;padding:14px 16px}
 .legacy-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px}
 .legacy-col{}
+
+/* ===== TABLET (≤ 720px) ===== */
+@media (max-width:720px){
+  body{padding:8px}
+  .header{padding:14px 18px 11px}
+  .header h1{font-size:22px}
+  .hero{flex-direction:column}
+  .photo-slot{width:100%;min-height:280px;border-right:none;border-bottom:3px solid #FAC775}
+  .photo-slot img{object-position:center top}
+  .hero-info{padding:14px 16px}
+  .hero-name{font-size:19px}
+  .grid2{grid-template-columns:1fr}
+  .cell{padding:13px}
+  .full-dark{padding:13px 14px}
+  .phil-grid{grid-template-columns:1fr 1fr;gap:6px}
+  .quote-grid{grid-template-columns:1fr;gap:8px}
+  .legacy-grid{grid-template-columns:1fr;gap:12px}
+  .edu-row{flex-direction:column;gap:6px}
+  .footer{padding:11px 16px}
+  .footer-text{font-size:9.5px;letter-spacing:1px}
+}
+
+/* ===== MOBILE (≤ 480px) ===== */
+@media (max-width:480px){
+  body{padding:0}
+  .poster{box-shadow:none}
+  .header{padding:12px 14px 10px}
+  .header h1{font-size:18px;letter-spacing:.5px;line-height:1.2}
+  .photo-slot{min-height:240px}
+  .hero-info{padding:13px 14px}
+  .hero-name{font-size:17px}
+  .hero-nick{font-size:10px}
+  .stat-num{font-size:15px}
+  .stat-desc{font-size:8.5px}
+  .stat-box{padding:6px 8px}
+  .hero-stats{gap:6px}
+  .cell,.full-dark{padding:11px 12px}
+  .sec-label{font-size:9.5px;letter-spacing:1.5px}
+  .sec-title{font-size:13px}
+  .bullet,.phil-body,.quote-text,.tl-text,.bar-company{font-size:10.5px}
+  .phil-grid{grid-template-columns:1fr;gap:6px}
+  .bar-company{min-width:75px;font-size:10px}
+  .bar-pct{font-size:9px}
+  .icon-pill{font-size:9.5px;padding:4px 9px}
+  .footer{padding:10px 12px}
+  .footer-text{font-size:8.5px;letter-spacing:.5px}
+  /* Net worth big number */
+  .full-dark div[style*="34px"]{font-size:28px !important}
+}
+
+/* ===== SMALL MOBILE (≤ 360px) ===== */
+@media (max-width:360px){
+  .header h1{font-size:16px}
+  .hero-stats{grid-template-columns:1fr}
+  .photo-slot{min-height:220px}
+}
 </style>
+</head>
+<body>
 
 <div class="poster">
 <h2 style="position:absolute;width:1px;height:1px;overflow:hidden">Warren Buffett infographic poster</h2>
@@ -220,3 +286,7 @@
   <div class="footer-text">The Oracle of Omaha &nbsp;·&nbsp; 1930 – Present &nbsp;·&nbsp; Berkshire Hathaway NYSE: BRK.A / BRK.B</div>
 </div>
 </div>
+
+</body>
+</html>
+
